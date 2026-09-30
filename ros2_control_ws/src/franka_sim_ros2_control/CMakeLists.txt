@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(franka_sim_ros2_control)
+find_package(ament_cmake REQUIRED)
+install(DIRECTORY config launch DESTINATION share/${PROJECT_NAME})
+install(PROGRAMS scripts/control_stack.py scripts/trajectory_client.py scripts/trajectory_gateway.py DESTINATION lib/${PROJECT_NAME})
+ament_package()
